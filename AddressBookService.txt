@@ -135,3 +135,22 @@ mysql> select * from address_book where state='CA';
 | Tod        | Austin    | 123-ST 90 | Stavanger | CA    | 4007 | 2837429834   | austin_tod@yahoo.com |
 +------------+-----------+-----------+-----------+-------+------+--------------+----------------------+
 2 rows in set (0.00 sec)
+
+
+mysql> select count(first_name),city from address_book group by city;
++-------------------+-----------+
+| count(first_name) | city      |
++-------------------+-----------+
+|                 2 | Stavanger |
+|                 1 | Helsinki  |
++-------------------+-----------+
+2 rows in set (0.02 sec)
+
+mysql> select count(first_name),state from address_book group by state;
++-------------------+-------+
+| count(first_name) | state |
++-------------------+-------+
+|                 2 | CA    |
+|                 1 | LA    |
++-------------------+-------+
+2 rows in set (0.00 sec)
