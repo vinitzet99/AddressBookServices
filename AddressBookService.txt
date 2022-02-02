@@ -91,3 +91,28 @@ mysql> select * from address_book;
 | Mark       | Henery    | 124-ST 90     | Stavanger | CA    | 4007  | 283478437483 | mark@yahoo.com        |
 +------------+-----------+---------------+-----------+-------+-------+--------------+-----------------------+
 4 rows in set (0.11 sec)
+
+
+mysql> select * from address_book;
++------------+-----------+---------------+-----------+-------+-------+--------------+-----------------------+
+| first_name | last_name | address       | city      | state | zip   | phone_number | email                 |
++------------+-----------+---------------+-----------+-------+-------+--------------+-----------------------+
+| Bill       | Boyer     | Skagen 21     | Stavanger | CA    | 4006  | 1827738192   | bill@yahoo.com        |
+| Jeremy     | Boyer     | Keskuskatu 45 | Helsinki  | LA    | 21240 | 92342387748  | boyerjeremy@gmail.com |
+| Tod        | Austin    | 123-ST 90     | Stavanger | CA    | 4007  | 2837429834   | austin_tod@yahoo.com  |
+| Mark       | Henery    | 124-ST 90     | Stavanger | CA    | 4007  | 283478437483 | mark@yahoo.com        |
++------------+-----------+---------------+-----------+-------+-------+--------------+-----------------------+
+4 rows in set (0.11 sec)
+
+mysql> delete from address_book where first_name='Mark';
+Query OK, 1 row affected (0.31 sec)
+
+mysql> select * from address_book;
++------------+-----------+---------------+-----------+-------+-------+--------------+-----------------------+
+| first_name | last_name | address       | city      | state | zip   | phone_number | email                 |
++------------+-----------+---------------+-----------+-------+-------+--------------+-----------------------+
+| Bill       | Boyer     | Skagen 21     | Stavanger | CA    | 4006  | 1827738192   | bill@yahoo.com        |
+| Jeremy     | Boyer     | Keskuskatu 45 | Helsinki  | LA    | 21240 | 92342387748  | boyerjeremy@gmail.com |
+| Tod        | Austin    | 123-ST 90     | Stavanger | CA    | 4007  | 2837429834   | austin_tod@yahoo.com  |
++------------+-----------+---------------+-----------+-------+-------+--------------+-----------------------+
+3 rows in set (0.01 sec)
