@@ -195,3 +195,13 @@ mysql> select * from address_book;
 | Tod        | Austin    | 123-ST 90     | Stavanger | CA    | 4007  | 2837429834   | austin_tod@yahoo.com  | AB1  | developer  |
 +------------+-----------+---------------+-----------+-------+-------+--------------+-----------------------+------+------------+
 3 rows in set (0.00 sec)
+
+
+mysql> select count(first_name),profession from address_book group by profession;
++-------------------+------------+
+| count(first_name) | profession |
++-------------------+------------+
+|                 1 | Engineer   |
+|                 2 | developer  |
++-------------------+------------+
+2 rows in set (0.00 sec)
